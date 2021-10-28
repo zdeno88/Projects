@@ -5,3 +5,4 @@ druhy radek
 treti radek
 ctvrty radek
 Vytvoříme konflikt - přidáme řádek
+Tady bude konfliktní řádek
