@@ -1,4 +1,4 @@
 # Pokus
 Zkouška git
-Radek
+prvni radek
 druhy radek
