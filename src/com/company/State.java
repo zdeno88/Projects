@@ -1,13 +1,11 @@
 package com.company;
 
-import java.util.Comparator;
-
 public class State implements Comparable<State>{
     private String codeOfState;
     private String nameOfState;
     private int dph;
     private int vat;
-    private boolean specialRate;
+    private boolean specialRateOfDPH;
 
     public State(String codeOfState, String nameOfState, String dph, String vat, String specialRate) {
         try {
@@ -15,14 +13,14 @@ public class State implements Comparable<State>{
             this.nameOfState = nameOfState;
             this.dph = Integer.parseInt(dph);
             this.vat = Integer.parseInt(vat);
-            this.specialRate = Boolean.parseBoolean(specialRate);
+            this.specialRateOfDPH = Boolean.parseBoolean(specialRate);
         }
         catch (NumberFormatException e){
             System.out.println("Spatne zadany format cisla na radku: "+StateOfEU.lineNumber);
         }
     }
     public String getStateInfoFormat1(){
-        return getNameOfState()+" ("+getCodeOfState()+"):\t"+(int)getDph()+" %\n";
+        return getNameOfState()+" ("+getCodeOfState()+"):\t"+getDph()+" %\n";
     }
     public String getStateInfoFormat2(){
         if (getNameOfState().length()<6)
@@ -63,11 +61,11 @@ public class State implements Comparable<State>{
         this.vat = vat;
     }
 
-    public boolean isSpecialRate() {
-        return specialRate;
+    public boolean isSpecialRateOfDPH() {
+        return specialRateOfDPH;
     }
-    public void setSpecialRate(boolean specialRate) {
-        this.specialRate = specialRate;
+    public void setSpecialRateOfDPH(boolean specialRateOfDPH) {
+        this.specialRateOfDPH = specialRateOfDPH;
     }
 
     @Override
