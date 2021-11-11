@@ -8,11 +8,11 @@ import java.util.Scanner;
 public class StateOfEU {
 
     List<State>listOfSate=new ArrayList();
-    final String PATH_NAME_FROM="C:\\Users\\skaryd\\Documents\\Engeto\\Projekt\\Projekt1\\State.txt";
+    final String PATH_NAME_FROM="Projekt1\\State.txt";
     File fileFrom=new File(PATH_NAME_FROM);
     final String REGET="\t";
     static int lineNumber;
-    final String PATH_NAME_TO="C:\\Users\\skaryd\\Documents\\Engeto\\Projekt\\Projekt1\\vat-over-20.txt";
+    final String PATH_NAME_TO="Projekt1\\vat-over-20.txt";
     File fileTo=new File(PATH_NAME_TO);
     String numberForSearching;
 
