@@ -17,21 +17,21 @@ public class Main {
             e.printStackTrace();
         }
         /* Vystup2 */
-//        System.out.println("Vystup2: \n"+stateOfEU.getrStateOfEUInfo());
+        System.out.println("Vystup2: \n"+stateOfEU.getrStateOfEUInfo());
         /* Vystup3 */
-//        System.out.println("Vystup3: \n"+stateOfEU.getParticularStateOfEUInfo());
-//        Collections.sort(stateOfEU.listOfSate);
+        System.out.println("Vystup3: \n"+stateOfEU.getParticularStateOfEUInfo());
         /* Vystup4 */
-//        System.out.println("Vystup4: \n"+stateOfEU.getParticularStateOfEUInfo());
+        Collections.sort(stateOfEU.listOfSate);
+        System.out.println("Vystup4: \n"+stateOfEU.getParticularStateOfEUInfo());
         /* Vystup5 */
-//        System.out.println("Vystup5: \n"+stateOfEU.getStateOfEUInfoTask5());
-//        stateOfEU.writingToFile();
+        System.out.println("Vystup5: \n"+stateOfEU.getStateOfEUInfoTask5());
+        stateOfEU.writingToFile();
         /* Vystup7 */
-//        Scanner scanner=new Scanner(System.in);
-//        System.out.println("Zadej vysi sazby DPH pro filtrovani: ");
-//        stateOfEU.setNumberForSearching(scanner.nextLine());
-//        System.out.println("Vystup7: \n"+stateOfEU.getStateOfEUInfoTask7());
-//        stateOfEU.writingToFileTask7();
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Zadej vysi sazby DPH pro filtrovani: ");
+        stateOfEU.setNumberForSearching(scanner.nextLine());
+        System.out.println("Vystup7: \n"+stateOfEU.getStateOfEUInfoTask7());
+        stateOfEU.writingToFileTask7();
 
     }
 }
