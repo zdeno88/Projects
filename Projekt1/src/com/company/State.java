@@ -3,16 +3,16 @@ package com.company;
 public class State implements Comparable<State>{
     private String codeOfState;
     private String nameOfState;
-    private int dph;
-    private int vat;
+    private double dph;
+    private double vat;
     private boolean specialRateOfDPH;
 
     public State(String codeOfState, String nameOfState, String dph, String vat, String specialRate) {
         try {
             this.codeOfState = codeOfState;
             this.nameOfState = nameOfState;
-            this.dph = Integer.parseInt(dph);
-            this.vat = Integer.parseInt(vat);
+            this.dph = Double.parseDouble(dph);
+            this.vat = Double.parseDouble(vat);
             this.specialRateOfDPH = Boolean.parseBoolean(specialRate);
         }
         catch (NumberFormatException e){
@@ -20,17 +20,17 @@ public class State implements Comparable<State>{
         }
     }
     public String getStateInfoFormat1(){
-        return getNameOfState()+" ("+getCodeOfState()+"):\t"+getDph()+" %\n";
+        return getNameOfState()+" ("+getCodeOfState()+"):\t"+(int)getDph()+" %\n";
     }
     public String getStateInfoFormat2(){
         if (getNameOfState().length()<6)
-            return getNameOfState()+" ("+getCodeOfState()+"):\t\t\t\t"+getDph()+" % ("+getVat()+" %)\n";
+            return getNameOfState()+" ("+getCodeOfState()+"):\t\t\t\t"+(int)getDph()+" % ("+getVat()+" %)\n";
         else if (getNameOfState().length()<11)
-        return getNameOfState()+" ("+getCodeOfState()+"):\t\t\t"+getDph()+" % ("+getVat()+" %)\n";
+        return getNameOfState()+" ("+getCodeOfState()+"):\t\t\t"+(int)getDph()+" % ("+getVat()+" %)\n";
         else if (getNameOfState().length()==11)
-            return getNameOfState()+" ("+getCodeOfState()+"):\t\t"+getDph()+" % ("+getVat()+" %)\n";
+            return getNameOfState()+" ("+getCodeOfState()+"):\t\t"+(int)getDph()+" % ("+getVat()+" %)\n";
         else
-            return getNameOfState()+" ("+getCodeOfState()+"):\t"+getDph()+" % ("+getVat()+" %)\n";
+            return getNameOfState()+" ("+getCodeOfState()+"):\t"+(int)getDph()+" % ("+getVat()+" %)\n";
     }
 
     public String getCodeOfState() {
@@ -47,14 +47,14 @@ public class State implements Comparable<State>{
         this.nameOfState = nameOfState;
     }
 
-    public int getDph() {
+    public double getDph() {
         return dph;
     }
     public void setDph(int dph) {
         this.dph = dph;
     }
 
-    public int getVat() {
+    public double getVat() {
         return vat;
     }
     public void setVat(int vat) {
@@ -70,8 +70,8 @@ public class State implements Comparable<State>{
 
     @Override
     public int compareTo(State second) {
-        Integer firstDPH=dph;
-        Integer secondDPH=second.dph;
+        Double firstDPH=dph;
+        Double secondDPH=second.dph;
         return secondDPH.compareTo(firstDPH);
     }
 }
