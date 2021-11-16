@@ -20,12 +20,7 @@ public class StateOfEU {
         try (Scanner scanner=new Scanner(fileFrom)){
             while (scanner.hasNextLine()){
                 String testCharacter= scanner.nextLine();
-                for (int i=0;i<testCharacter.length();i++){
-                    if (testCharacter.charAt(i)==','){
-                        testCharacter=testCharacter.replace(",",".");
-
-                    }
-                }
+                testCharacter=testCharacter.replace(",",".");
                 String []nextLine=testCharacter.split(REGET);
                 lineNumber++;
                 if (nextLine.length!=5){
@@ -122,9 +117,9 @@ public class StateOfEU {
     public void writingToFileTask7(){
         String pathNameTask7;
         if (numberForSearching.equals("")){
-            pathNameTask7="C:\\Users\\skaryd\\Documents\\Engeto\\Projekt\\Projekt1\\vat-over-20.txt";
+            pathNameTask7="vat-over-20.txt";
         }
-        else pathNameTask7="C:\\Users\\skaryd\\Documents\\Engeto\\Projekt\\Projekt1\\vat-over-"+numberForSearching+".txt";
+        else pathNameTask7="vat-over-"+numberForSearching+".txt";
         File fileTo=new File(pathNameTask7);
         try (BufferedWriter bw=new BufferedWriter(new FileWriter(fileTo))){
             bw.write(getStateOfEUInfoTask7());
