@@ -1,0 +1,8 @@
+####################################
+Třída: 4.C (ročník: 4)
+Třídní učitel: Novak, Jan
+Počet studentů: 3
+####################################
+# 1 # ID0001 - Petr Svoboda (2011)
+# 2 # ID0002 - Milan Riha (2010)
+# 3 # ID0003 - Jindrich Novy (2012)
