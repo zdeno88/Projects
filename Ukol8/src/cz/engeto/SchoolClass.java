@@ -1,7 +1,6 @@
 package cz.engeto;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,11 +20,11 @@ public class SchoolClass implements GetInfo{
         studentList.add(student);
     }
     @Override
-    public String getIngo() {
+    public String printIngo() {
         StringBuilder result=new StringBuilder();
         result.append("####################################\n").
                 append("Třída: ").append(getNumberOfClass()).append(".").append(getLetterOfClass()).append(" (ročník: ").append(getNumberOfClass()).append(")\n").
-                append("Třídní učitel: ").append(teacher.getIngo()).append("\n").
+                append("Třídní učitel: ").append(teacher.printIngo()).append("\n").
                 append("Počet studentů: ").append(studentList.size());
 
         return result.toString();
@@ -36,7 +35,7 @@ public class SchoolClass implements GetInfo{
         result.append("####################################\n");
         for (Student student:studentList) {
             ++number;
-            result.append("# ").append(number).append(" ").append(student.getIngo()).append("\n");
+            result.append("# ").append(number).append(" ").append(student.printIngo()).append("\n");
 
         }
         return result.toString();
@@ -48,8 +47,8 @@ public class SchoolClass implements GetInfo{
         return letterOfClass;
     }
     public void printToFile(){
-        try (BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(new File(FILE_NAME)))){
-            bufferedWriter.write(getIngo());
+        try (BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(FILE_NAME))){
+            bufferedWriter.write(printIngo());
             bufferedWriter.write("\n");
             bufferedWriter.write(getMoreInfo());
         }

@@ -13,7 +13,7 @@ public class Main {
         schoolClass1.addStudents(student1);
         schoolClass1.addStudents(student2);
         schoolClass1.addStudents(student3);
-        System.out.println(schoolClass1.getIngo());
+        System.out.println(schoolClass1.printIngo());
         System.out.println(schoolClass1.getMoreInfo());
         schoolClass1.printToFile();
     }

@@ -9,18 +9,18 @@ public class Student extends Person implements GetInfo{
     private final String IDnumber;
     StringBuilder result=new StringBuilder();
     private static final DecimalFormat decimalFormat = new DecimalFormat("0000");
-    private final String id="ID";
+
     public Student(String name, String surname, LocalDate dateOfBirhtday) {
         super(name, surname);
         this.dateOfBirhtday = dateOfBirhtday;
+        String id = "ID";
         IDnumber=result.append(id).append(decimalFormat.format(setNumber())).toString();
     }
     public int setNumber() {
-        int number = ++counter;
-        return number;
-    }
+        return ++counter;
+       }
     @Override
-    public String getIngo() {
+    public String printIngo() {
         return "# "+IDnumber+" - "+name+" "+surname+" ("+dateOfBirhtday.getYear()+")";
     }
 }

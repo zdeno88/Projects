@@ -5,7 +5,7 @@ public class Teacher extends Person implements GetInfo{
         super(name, surname);
     }
     @Override
-    public String getIngo() {
+    public String printIngo() {
         return surname+", "+name;
     }
 }
