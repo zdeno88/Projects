@@ -6,6 +6,8 @@ public class Main {
         Item item = new Item();
         item.loadingListFromMySQL();
         System.out.println("Metoda1:\n" + item.loadItemById(1));
+        System.out.println("Metoda2");
+        item.printAll();
         item.deleteAllOutOfStockItems();
         System.out.println("Metoda3:");
         item.loadAllAvailableItems().forEach(System.out::println);
@@ -13,6 +15,6 @@ public class Main {
         item.updatePrice(3, BigDecimal.valueOf(5));
         System.out.println("Konec");
 //        Testovaci metoda
-//        item.printAll();
+        item.printAll();
     }
 }
