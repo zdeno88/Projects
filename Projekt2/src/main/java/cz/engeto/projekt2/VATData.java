@@ -1,12 +1,17 @@
 package cz.engeto.projekt2;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class VATData {
+    @JsonProperty("last_updated")
     private String last_updated;
+    @JsonProperty("disclaimer")
     private String disclaimer;
-    private Map<String,Object>rates=new HashMap<>();
+    @JsonProperty("rates")
+    private Map<String,State>rates=new HashMap<>();
 
     public String getLast_updated() {
         return last_updated;
@@ -24,11 +29,11 @@ public class VATData {
         this.disclaimer = disclaimer;
     }
 
-    public Map<String, Object> getRates() {
+    public Map<String, State> getRates() {
         return rates;
     }
 
-    public void setRates(Map<String, Object> rates) {
+    public void setRates(Map<String, State> rates) {
         this.rates = rates;
     }
 }
