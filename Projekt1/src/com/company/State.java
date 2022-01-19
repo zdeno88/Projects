@@ -19,6 +19,7 @@ public class State implements Comparable<State>{
             System.out.println("Spatne zadany format cisla na radku: "+StateOfEU.lineNumber);
         }
     }
+
     public String getStateInfoFormat1(){
         return getNameOfState()+" ("+getCodeOfState()+"):\t"+(int)getDph()+" %\n";
     }
