@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 public class Main {
+    //test postman
     List<VATData> vatDataList = new ArrayList<>();
 
     @GetMapping(value = "/hello")

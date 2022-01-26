@@ -28,10 +28,6 @@ public class State implements Comparable<State> {
         return getCountry() + ":\t" + getStandard_rate() + "%";
     }
 
-//    Hungary (HU):			27 % (18.0 %)
-//    Denmark (DK):			25 % (25.0 %)
-//    Croatia (HR):			25 % (13.0 %)
-
     public String getCountry() {
         return country;
     }
