@@ -1,0 +1,9 @@
+První tři s nejnižší sazbou DPH:
+Hungary:	27.0%
+Sweden:	25.0%
+Croatia:	25.0%
+
+První tři s nejvyšší sazbou DPH:
+Luxembourg:	17.0%
+Malta:	18.0%
+Cyprus:	19.0%
